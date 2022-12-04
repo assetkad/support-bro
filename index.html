@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div id="container">
+    <h1>Депозитный калькулятор</h1>
+    <div id="calculator">
+        <!-- Form-->
+        <form>
+            <p>Имя</p>
+            <input type="text" id="username">
+            <p>Сколько денег вы хотите вложить?</p>
+            ₸ <input id="investamt" type="number" placeholder="Сумма денег">
+            <p>На протяжении скольки лет вы хотите влаживать?</p>
+            <select id="investyr" onchange='findOption(this)'>
+                <option disabled selected value="0">Выберите срок</option>
+                <option value="1">1 год</option>
+                <option value="2">2 года</option>
+                <option value="3">3 года</option>
+                <option value="4">4 года</option>
+                <option value="5">5 лет</option>
+                <option value="6">6 лет</option>
+                <option value="7">7 лет</option>
+                <option value="8">8 лет</option>
+                <option value="9">9 лет</option>
+                <option value="10">10 лет</option>
+            </select>
+        </form>
+        <p>Какой тариф с процентной ставкой выберите?</p>
+        %
+
+        <select id="investyr2" onchange='findOption(this)'>
+            <option disabled selected value="0">Выберите тариф</option>
+            <option value="4">Classic 4%</option>
+            <option value="5">Super 5%</option>
+            <option value="8">Ultra 8%</option>
+        </select>
+        </br>
+        </br>
+        <button type="button" id="calculate">Скалькулировать!</button>
+    </div>
+    </br>
+    <div id="investyield">
+        <sup>₸</sup><span id="yield">0.00</span>
+        <small id="yieldamount">Future Value</small>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
